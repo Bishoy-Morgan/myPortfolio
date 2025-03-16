@@ -75,7 +75,7 @@ const Testimonials = () => {
             className='testimonials relative w-dvw h-svh lg:pt-[5%] flex '
         >
             <div className='absolute top-0 left-0 w-full h-full'>
-                <Image src={bg} alt='' fill quality={100} />
+                <Image src={bg} alt='' fill priority quality={100} />
             </div>
 
             <div className='relative w-full px-[3%] flex flex-col lg:flex-row justify-between '>
@@ -101,12 +101,12 @@ const Testimonials = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className='relative w-full lg:w-2/5 mt-[2%] testimonials-375   '
+                    className='relative w-full lg:w-2/5 mt-[2%] testimonials-375 overflow-hidden  '
                 >
                     {sliderLoaded && (
                         <button 
                         onClick={slidePrev} 
-                        className='absolute left-[40%] -translate-x-1/2 lg:translate-x-0 lg:left-0 bottom-[15%] lg:bottom-[10%] w-[12%] lg:w-[8%] h-[7%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
+                        className='absolute left-[40%] -translate-x-1/2 lg:translate-x-0 lg:left-0 bottom-[15%] lg:bottom-[10%] w-[12%] lg:w-[8%] h-[10%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
                         >
                             <Image 
                                 src={whiteArrow}
@@ -129,21 +129,25 @@ const Testimonials = () => {
                                 style={{ backgroundColor: item.backgroundColor }}
                             >                        
                                 <div className='w-1/2 h-full pl-[3%] pt-[3%] flex flex-col items-start justify-between '>
-                                    <Image 
-                                    src={item.owner} 
-                                    alt='Testimonial'
-                                    width={1.22 * 120} 
-                                    height={120} 
-                                    style={{ objectFit: "cover", maxWidth: "120px", maxHeight: "120px" }} 
-                                    quality={100} 
-                                    className='rounded-full object-cover lg:w-[10vw] lg:h-[22vh]  '
-                                    />
+                                    <div className='relative w-3/5 h-3/4 lg:w-3/5 lg:h-1/2 rounded-full overflow-hidden '>
+                                        <Image 
+                                        src={item.owner} 
+                                        alt='Testimonial'
+                                        fill
+                                        sizes="(max-width: 768px) 60vw, (max-width: 1200px) 30vw, 20vw"
+                                        style={{
+                                            objectFit: "cover", 
+                                        }}
+                                        quality={100} 
+                                        className='rounded-full object-cover '
+                                        />
+                                    </div>
                                     <div className='relative w-full h-[50vh] pb-[6%] flex flex-col items-start justify-end gap-y-[4%] overflow-hidden '>
                                         {item.comments.map((comment, i) => (
                                             <motion.div 
                                                 key={i} 
                                                 initial={{ opacity: 0, y: 20 }}
-                                                animate={currentSlide === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Show when active
+                                                animate={currentSlide === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // 
                                                 transition={{ duration: 0.5, delay: i * 0.3 }}
                                                 className='text-[2.991vw] px-[7%] py-[4%] lg:text-[1.384vw] lg:leading-[2.05vw] lg:px-[5%] lg:py-[2%] bg-[#1d1d1d] rounded-full text-white'
                                             >
@@ -156,7 +160,9 @@ const Testimonials = () => {
                                     <Image 
                                     src={item.website} 
                                     alt='Testimonial'
-                                    fill 
+                                    fill
+                                    priority
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     style={{ objectFit: "cover" }}
                                     quality={100} 
                                     className='object-cover object-left-top rounded-br-4xl'
@@ -169,7 +175,7 @@ const Testimonials = () => {
                     {sliderLoaded && (
                         <button 
                             onClick={slideNext} 
-                            className='absolute left-[60%] -translate-x-1/2 lg:translate-x-0 lg:left-[12%] bottom-[15%] lg:bottom-[10%] w-[12%] lg:w-[8%] h-[7%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
+                            className='absolute left-[60%] -translate-x-1/2 lg:translate-x-0 lg:left-[12%] bottom-[15%] lg:bottom-[10%] w-[12%] lg:w-[8%] h-[10%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
                         >
                             <Image 
                                 src={whiteArrow}

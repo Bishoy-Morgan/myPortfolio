@@ -21,7 +21,7 @@ const Portfolio = () => {
             title: 'COFFIQUE is an e-commerce website especialize in all about coffee.', 
             techniques: ["HTML5", "TailwindCSS", "Javascript", "ReactJS", "NextJS", "NodeJS"],
             gradient: "gray-gradient",
-            href: ''
+            href: '#'
         },
         { 
             id: 3,
@@ -167,6 +167,8 @@ const Portfolio = () => {
                                             alt="Project Image"
                                             fill
                                             quality={100}
+                                            priority
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             style={{ objectFit: "cover" }}
                                             className='rounded-tl-4xl rounded-br-4xl projectImage z-20 scale-100 transition-all duration-300 ease-in-out group-hover:scale-105'
                                         />

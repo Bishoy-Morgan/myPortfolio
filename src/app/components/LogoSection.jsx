@@ -44,31 +44,37 @@ const Logos = () => {
             <div className="relative w-full grid grid-cols-2 lg:grid-cols-5 gap-y-20 px-[2%] z-20 place-items-center">
                 {logos.map((logo, index) => (
                     <motion.div
-                        key={index}
-                        className="!relative flex justify-center "
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={inView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key={index}
+                    className="!relative flex justify-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
+                        {/* Desktop Image */}
                         <Image
                             src={logo.src}
                             alt={logo.alt}
                             quality={100}
                             unoptimized
                             className="hidden lg:block grayscale transition-all duration-200 hover:grayscale-0"
+                            sizes="(max-width: 1024px) 12vw, 9.375vw"
                             style={{
-                                width: logo.size === 'large' ? "clamp(8vw, 12vw, 13vw)" : "clamp(6.25vw, 7.813vw, 9.375vw)",
+                                width: logo.size === "large" ? "clamp(8vw, 12vw, 13vw)" : "clamp(6.25vw, 7.813vw, 9.375vw)",
                                 height: "auto",
                             }}
                         />
+
+                        {/* Mobile Image */}
                         <Image
                             src={logo.src}
                             alt={logo.alt}
                             quality={100}
                             unoptimized
-                            className=" lg:hidden grayscale transition-all duration-200 hover:grayscale-0"
+                            priority
+                            className="lg:hidden grayscale transition-all duration-200 hover:grayscale-0"
+                            sizes="(max-width: 1024px) 35vw, 22vw"
                             style={{
-                                width: logo.size === 'large' ? "clamp(30vw, 32vw, 35vw)" : "clamp(15vw, 20vw, 22vw)",
+                                width: logo.size === "large" ? "clamp(30vw, 32vw, 35vw)" : "clamp(15vw, 20vw, 22vw)",
                                 height: "auto",
                             }}
                         />
