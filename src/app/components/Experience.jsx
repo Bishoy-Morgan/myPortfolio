@@ -19,14 +19,14 @@ const Experience = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="experience-375 w-dvw h-[85vh] lg:h-svh pl-[2%] lg:pl-[.5%] pr-[1.7%] max-375 "
+            className="experience-375 w-dvw h-dvh lg:h-svh pl-[2%] lg:pl-[.5%] pr-[1.7%] max-375 "
         >
-            <div className="w-full h-full flex flex-col lg:gap-y-[15%] rounded-tl-4xl rounded-br-4xl bg-[#1d1d1d] pl-[3%] pt-[6%] lg:pt-[4%] relative">
+            <div className="w-full h-full flex flex-col gap-y-[2%] lg:gap-y-[15%] rounded-tl-4xl rounded-br-4xl bg-[#1d1d1d] pl-[3%] pt-[6%] lg:pt-[4%] relative">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: .5, delay: 0.5 }}
-                    className="flex flex-col lg:flex-row gap-[2%] ml-[3%] lg:ml-0"
+                    className=" h-1/5 flex flex-col lg:flex-row gap-[2%] ml-[3%] lg:ml-0"
                 >
                     <span className="p3 mb-[2%] lg:mb-0 text-[#fafafab3] uppercase">Experience</span>
                     <h2 className="text-[#fafafa] ">
@@ -58,7 +58,7 @@ const Experience = () => {
                     </h2>
                 </motion.div>
                 <div
-                    className="image-375 relative w-full h-[60vh] lg:h-[50vh] mt-[8%] lg:mt-0 gap-y-[10%] lg:gap-y-0 flex flex-col lg:flex-row items-center justify-center lg:gap-x-[6%] "
+                    className="image-375 relative w-full h-3/4 lg:h-[50vh] gap-y-[5%] lg:gap-y-0 flex flex-col lg:flex-row items-center justify-center lg:gap-x-[6%] "
                 >
                     <motion.div 
                     initial={{ opacity: 0, y: 80 }}

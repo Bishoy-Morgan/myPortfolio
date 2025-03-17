@@ -32,7 +32,7 @@ const Logos = () => {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
-        <section ref={ref} className="relative w-dvw h-[90vh] lg:h-[80vh] pr-[2%] pb-[10%] lg:pb-0 flex flex-col items-center justify-center ">
+        <section ref={ref} className="relative w-dvw h-full lg:h-[80vh] pb-[10%] lg:pb-0 flex flex-col items-center justify-center ">
             {/* Gradient Background */}
             <div className="gradient-bg absolute -top-[5%] left-0 w-full h-1/2 z-10"></div>
 
@@ -71,7 +71,7 @@ const Logos = () => {
                             quality={100}
                             unoptimized
                             priority
-                            className="lg:hidden grayscale transition-all duration-200 hover:grayscale-0"
+                            className="lg:hidden"
                             sizes="(max-width: 1024px) 35vw, 22vw"
                             style={{
                                 width: logo.size === "large" ? "clamp(30vw, 32vw, 35vw)" : "clamp(15vw, 20vw, 22vw)",
