@@ -72,20 +72,20 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }} // Animate when in viewport
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className='testimonials relative w-dvw h-svh lg:pt-[5%] flex '
+            className='testimonials relative w-dvw h-dvh lg:pt-[5%] flex '
         >
             <div className='absolute top-0 left-0 w-full h-full'>
                 <Image src={bg} alt='' fill priority quality={100} />
             </div>
 
-            <div className='relative w-full px-[3%] flex flex-col lg:flex-row justify-between '>
+            <div className='relative w-full h-full px-[3%] flex flex-col lg:flex-row justify-between '>
                 {/* Title Section */}
                 <motion.div 
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className='w-full lg:w-3/5 pl-[2%] lg:pl-0 '
+                    className='w-full h-1/4 lg:h-auto lg:w-3/5 pl-[2%] lg:pl-0 '
                 >
                     <div className='flex flex-col lg:flex-row gap-[4%] '>
                         <span className='p3 text-[#fafafab3] uppercase mb-[5%] lg:mb-0'>Testimonials</span>
@@ -101,12 +101,12 @@ const Testimonials = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className='relative w-full lg:w-2/5 mt-[2%] testimonials-375 overflow-hidden  '
+                    className='relative w-full h-3/4 lg:h-full lg:w-2/5 mt-[2%] testimonials-375 overflow-hidden  '
                 >
                     {sliderLoaded && (
                         <button 
                         onClick={slidePrev} 
-                        className='absolute left-[40%] -translate-x-1/2 lg:translate-x-0 lg:left-0 bottom-[15%] lg:bottom-[10%] w-[12%] lg:w-[8%] h-[10%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
+                        className='absolute left-[40%] -translate-x-1/2 lg:translate-x-0 lg:left-0 bottom-[15%] lg:bottom-[10%] w-[15%] lg:w-[8%] h-[10%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
                         >
                             <Image 
                                 src={whiteArrow}
@@ -129,7 +129,7 @@ const Testimonials = () => {
                                 style={{ backgroundColor: item.backgroundColor }}
                             >                        
                                 <div className='w-1/2 h-full pl-[3%] pt-[3%] flex flex-col items-start justify-between '>
-                                    <div className='relative w-3/5 h-3/4 lg:w-3/5 lg:h-1/2 rounded-full overflow-hidden '>
+                                    <div className='relative w-40 h-60 lg:w-3/5 lg:h-1/2 overflow-hidden '>
                                         <Image 
                                         src={item.owner} 
                                         alt='Testimonial'
@@ -139,7 +139,7 @@ const Testimonials = () => {
                                             objectFit: "cover", 
                                         }}
                                         quality={100} 
-                                        className='rounded-full object-cover '
+                                        className='rounded-full object-cover p-[10%]'
                                         />
                                     </div>
                                     <div className='relative w-full h-[50vh] pb-[6%] flex flex-col items-start justify-end gap-y-[4%] overflow-hidden '>
@@ -165,7 +165,7 @@ const Testimonials = () => {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     style={{ objectFit: "cover" }}
                                     quality={100} 
-                                    className='object-cover object-left-top rounded-br-4xl'
+                                    className='object-cover object-left-top '
                                     />
                                 </div>
                             </motion.div>
@@ -175,7 +175,7 @@ const Testimonials = () => {
                     {sliderLoaded && (
                         <button 
                             onClick={slideNext} 
-                            className='absolute left-[60%] -translate-x-1/2 lg:translate-x-0 lg:left-[12%] bottom-[15%] lg:bottom-[10%] w-[12%] lg:w-[8%] h-[10%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
+                            className='absolute left-[60%] -translate-x-1/2 lg:translate-x-0 lg:left-[12%] bottom-[15%] lg:bottom-[10%] w-[15%] lg:w-[8%] h-[10%] lg:h-[8%] flex items-center justify-center rounded-md z-10 transition-all duration-200 ease-in-out border border-[#ffd401] hover:bg-[#ffd401]/15 cursor-pointer '
                         >
                             <Image 
                                 src={whiteArrow}
