@@ -66,7 +66,7 @@ const Experience = () => {
                     transition={{ duration: .5, delay: 1.25 }}
                     className='relative w-[95%] lg:w-2/5 h-full flex flex-col items-start justify-center gap-y-[10%] text-white '>
                         <div className='flex flex-col '>
-                            <span className='p1'>Junior Web Developer</span>
+                            <span className='p1'>Jr. Web Developer</span>
                             <span className='flex items-center gap-x-[2%]'>
                                 <div className='w-[5%] h-[.1vh] lg:h-[.2vh] bg-[#fafafa]'></div>
                                 <span className='p2 lg:text-[1.062vw] lg:leading-[1.463vw] inline-block my-[1%] '>Scizers Technologies LLP | 2025 - Present</span>
@@ -76,10 +76,10 @@ const Experience = () => {
                             </p>
                         </div>
                         <div className='flex flex-col '>
-                            <span className='p1'>Frontend Development Intern</span>
+                            <span className='p1'>Frontend Developer (Intern)</span>
                             <span className='flex items-center gap-x-[2%]'>
                                 <div className='w-[5%] h-[.1vh] lg:h-[.2vh] bg-[#fafafa]'></div>
-                                <span className='p2 lg:text-[1.062vw] lg:leading-[1.463vw] inline-block my-[1%] '>SCIZERS IoT Pvt. Ltd. | July 2024 - December 2024</span>
+                                <span className='p2 lg:text-[1.062vw] lg:leading-[1.463vw] inline-block my-[1%] '>SCIZERS IoT Pvt. Ltd. | Jan 2024 - Jun 2024</span>
                             </span>
                             <p className='p2 pl-[7%] '>
                                 I specialize in building high-performance, multilingual websites for leading UAE businesses. I focus on optimizing speed, ensuring accessibility, and delivering pixel-perfect UI experiences that align with business goals.

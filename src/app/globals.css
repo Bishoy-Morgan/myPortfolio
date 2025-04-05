@@ -277,6 +277,22 @@ h5 {
   }
 }
 
+.maroon-gradient {
+  height: 100%;
+  background: linear-gradient(120deg, #832030, #9a2d3d);
+  animation: maroonLight 5s infinite alternate;
+}
+
+@keyframes maroonLight {
+  0% {
+    background: linear-gradient(120deg, #832030, #9a2d3d);
+  }
+  100% {
+    background: linear-gradient(120deg, #9a2d3d, #832030);
+  }
+}
+
+
 .loader {
   width: 25%;
   aspect-ratio: 2;

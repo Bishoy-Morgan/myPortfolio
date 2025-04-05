@@ -9,12 +9,21 @@ import coffique from '@/public/images/portfolio/coffique.png'
 import legend from '@/public/images/portfolio/legend.png'
 import spaceMortgage from '@/public/images/portfolio/spaceMortgage.png'
 import palmJebelAli from '@/public/images/portfolio/palmJebelAli.png'
+import maps from '@/public/images/portfolio/mapdxb.png'
 import aquaArc from '@/public/images/portfolio/aquaArc.png'
 import share from '@/public/images/portfolio/share.svg'
 import Link from 'next/link'
 
 const Portfolio = () => {
     const slides = [
+        { 
+            id: 1,
+            imageSrc: maps,
+            title: ' MAP DXB is website selling all kinds of properties from villas, townhouses and more in UAE', 
+            techniques: ["HTML5", "CSS3","TailwindCSS", "Javascript", "ReactJS", "NextJS", "NodeJS"],
+            gradient: "maroon-gradient",
+            href: 'https://mapdxb-com.vercel.app'
+        },
         { 
             id: 2,
             imageSrc: coffique,
